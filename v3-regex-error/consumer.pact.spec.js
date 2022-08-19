@@ -33,15 +33,15 @@ describe("Products API test", () => {
       })
       .willRespondWith({
         status: 200,
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-        },
         // headers: {
-        //   "Content-Type": regex({
-        //     generate: "application/json; charset=utf-8",
-        //     matcher: "^application/json",
-        //   }),
+        //   "Content-Type": "application/json; charset=utf-8",
         // },
+        headers: {
+          "Content-Type": regex({
+            generate: "application/json; charset=utf-8",
+            matcher: "^application/json",
+          }),
+        },
         // Fails if using regex for headers
         // 2022-08-19T15:04:09.775212Z  WARN ThreadId(01) pact_models::content_types: Failed to parse '' as a content type: mime parse error: a slash (/) was missing between the type and subtype
         // 2022-08-19T15:04:09.775667Z  WARN ThreadId(01) pact_models::content_types: Failed to parse '' as a content type: mime parse error: a slash (/) was missing between the type and subtype

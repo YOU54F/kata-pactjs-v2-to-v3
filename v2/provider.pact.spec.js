@@ -10,10 +10,7 @@ describe("Pact Verification", () => {
       providerBaseUrl: "http://localhost:8081",
       providerVersion: "1.0.0-someprovidersha",
       provider: "katacoda-provider-v2",
-      consumerVersionSelectors: [
-        { tag: "master", latest: true },
-        { tag: "prod", latest: true },
-      ],
+      consumerVersionSelectors: [{ mainBranch: true }],
       pactBrokerUrl: process.env.PACT_BROKER_BASE_URL,
       // pactUrls: [
       //   `${process.env.PWD}/pacts/katacoda-consumer-katacoda-provider.json`,
