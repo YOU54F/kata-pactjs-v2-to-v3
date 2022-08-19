@@ -1,0 +1,58 @@
+{
+  "consumer": {
+    "name": "katacoda-consumer"
+  },
+  "interactions": [
+    {
+      "description": "a request to get a product",
+      "providerStates": [
+        {
+          "name": "a product with ID 10 exists"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/products/10"
+      },
+      "response": {
+        "body": {
+          "id": 10,
+          "name": "Margharita",
+          "type": "pizza"
+        },
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "10.1.1"
+    },
+    "pactRust": {
+      "ffi": "0.3.8",
+      "models": "0.4.4"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "katacoda-provider"
+  }
+}
