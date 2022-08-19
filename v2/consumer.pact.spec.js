@@ -10,7 +10,7 @@ const expect = chai.expect;
 // (2) Configure our Pact library
 const mockProvider = new Pact({
   consumer: "katacoda-consumer-v2",
-  provider: "katacoda-provider-v3",
+  provider: "katacoda-provider-v2",
   cors: true, // needed for katacoda environment
 });
 

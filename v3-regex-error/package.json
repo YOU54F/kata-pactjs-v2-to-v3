@@ -1,0 +1,19 @@
+{
+  "name": "pactflow-getting-started-js",
+  "version": "0.1.0",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "scripts": {
+    "test:consumer": "mocha --exit --timeout 30000 consumer.pact.spec.js",
+    "test:provider": "mocha --exit --timeout 30000 provider.pact.spec.js",
+    "publish": "npx pact-broker publish ./pacts --consumer-app-version 1.0.0-someconsumersha --tag master"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^10.1.1",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
