@@ -1,6 +1,6 @@
 {
   "consumer": {
-    "name": "katacoda-consumer"
+    "name": "katacoda-consumer-v3"
   },
   "interactions": [
     {
@@ -53,6 +53,6 @@
     }
   },
   "provider": {
-    "name": "katacoda-provider"
+    "name": "katacoda-provider-v3"
   }
 }

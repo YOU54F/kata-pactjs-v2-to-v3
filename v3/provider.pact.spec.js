@@ -8,8 +8,8 @@ describe("Pact Verification", () => {
     const opts = {
       logLevel: "INFO",
       providerBaseUrl: "http://localhost:8081",
-      providerVersion: "1.0.999-someprovidersha",
-      provider: "katacoda-provider",
+      providerVersion: "1.0.0-someprovidersha",
+      provider: "katacoda-provider-v3",
       consumerVersionSelectors: [
         { tag: "master", latest: true },
         { tag: "prod", latest: true },

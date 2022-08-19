@@ -9,7 +9,7 @@ describe("Pact Verification", () => {
       logLevel: "INFO",
       providerBaseUrl: "http://localhost:8081",
       providerVersion: "1.0.0-someprovidersha",
-      provider: "katacoda-provider",
+      provider: "katacoda-provider-v2",
       consumerVersionSelectors: [
         { tag: "master", latest: true },
         { tag: "prod", latest: true },

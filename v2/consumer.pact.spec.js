@@ -9,8 +9,8 @@ const expect = chai.expect;
 
 // (2) Configure our Pact library
 const mockProvider = new Pact({
-  consumer: "katacoda-consumer",
-  provider: "katacoda-provider",
+  consumer: "katacoda-consumer-v2",
+  provider: "katacoda-provider-v3",
   cors: true, // needed for katacoda environment
 });
 
@@ -34,10 +34,10 @@ describe("Products API test", () => {
       willRespondWith: {
         status: 200,
         headers: {
-          "Content-Type": regex(
-            "^application/json",
-            "application/json; charset=utf-8"
-          ),
+          "Content-Type": regex({
+            generate: "application/json; charset=utf-8",
+            matcher: "^application/json",
+          }),
         },
         body: like(expectedProduct),
       },
