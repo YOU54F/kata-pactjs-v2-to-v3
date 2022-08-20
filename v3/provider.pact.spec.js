@@ -21,7 +21,7 @@ describe("Pact Verification", () => {
       // pactUrls: [
       //   `${process.env.PWD}/pacts/katacoda-consumer-v3-katacoda-provider-v3.json`,
       // ],
-      publishVerificationResult: false,
+      publishVerificationResult: true,
       enablePending: true,
     };
     // (3) Running the Provider verification task
