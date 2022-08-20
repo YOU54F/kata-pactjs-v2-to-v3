@@ -8,7 +8,7 @@ describe("Pact Verification", () => {
     const opts = {
       logLevel: "INFO",
       providerBaseUrl: "http://localhost:8081",
-      providerVersion: "1.0.0-someprovidersha",
+      providerVersion: "$(npx -y absolute-version)-provider",
       provider: "katacoda-provider-v2-v10",
       consumerVersionSelectors: [{ mainBranch: true }],
       pactBrokerUrl: process.env.PACT_BROKER_BASE_URL,
