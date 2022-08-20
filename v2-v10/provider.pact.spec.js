@@ -9,7 +9,7 @@ describe("Pact Verification", () => {
       logLevel: "INFO",
       providerBaseUrl: "http://localhost:8081",
       providerVersion: "1.0.0-someprovidersha",
-      provider: "katacoda-provider-v3-regex-error",
+      provider: "katacoda-provider-v2-v10",
       consumerVersionSelectors: [{ mainBranch: true }],
       pactBrokerUrl: process.env.PACT_BROKER_BASE_URL,
       // pactUrls: [
