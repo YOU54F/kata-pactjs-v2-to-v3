@@ -16,7 +16,7 @@
     "record-deployment:provider": "npx pact-broker record-deployment --pacticipant katacoda-provider-v2 --version $(npx -y absolute-version)-provider --environment production"
   },
   "devDependencies": {
-    "@pact-foundation/pact": "^9.17.3",
+    "@pact-foundation/pact": "10.1.2",
     "absolute-version": "^1.0.1",
     "chai": "^4.3.6",
     "mocha": "^10.0.0"
