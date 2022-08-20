@@ -1,5 +1,6 @@
 const { Verifier } = require("@pact-foundation/pact");
 const { server } = require("./provider");
+const { versionFromGitTag } = require("absolute-version");
 
 describe("Pact Verification", () => {
   // (1) Starting the Provider API
@@ -11,7 +12,7 @@ describe("Pact Verification", () => {
     const opts = {
       logLevel: "INFO",
       providerBaseUrl: "http://localhost:8081",
-      providerVersion: "$(npx -y absolute-version)-provider",
+      providerVersion: versionFromGitTag() + "-provider",
       provider: "katacoda-provider-v2",
       consumerVersionSelectors: [{ mainBranch: true }],
       pactBrokerUrl: process.env.PACT_BROKER_BASE_URL,

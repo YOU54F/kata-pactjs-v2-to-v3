@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@pact-foundation/pact": "^9.17.3",
+    "absolute-version": "^1.0.1",
     "chai": "^4.3.6",
     "mocha": "^10.0.0"
   }
