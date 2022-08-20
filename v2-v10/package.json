@@ -2,9 +2,9 @@
   "name": "pactflow-getting-started-js",
   "version": "0.1.0",
   "dependencies": {
-    "axios": "^0.27.2",
-    "cors": "^2.8.5",
-    "express": "^4.18.1"
+    "axios": "0.27.2",
+    "cors": "2.8.5",
+    "express": "4.18.1"
   },
   "scripts": {
     "test:consumer": "mocha --exit --timeout 30000 consumer.pact.spec.js",
@@ -16,9 +16,9 @@
     "record-deployment:provider": "npx pact-broker record-deployment --pacticipant katacoda-provider-v2 --version $(npx -y absolute-version)-provider --environment production"
   },
   "devDependencies": {
-    "@pact-foundation/pact": "^10.1.2",
-    "absolute-version": "^1.0.1",
-    "chai": "^4.3.6",
-    "mocha": "^10.0.0"
+    "@pact-foundation/pact": "10.1.2",
+    "absolute-version": "1.0.1",
+    "chai": "4.3.6",
+    "mocha": "10.0.0"
   }
 }
