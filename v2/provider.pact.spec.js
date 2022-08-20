@@ -14,7 +14,9 @@ describe("Pact Verification", () => {
       providerBaseUrl: "http://localhost:8081",
       provider: "katacoda-provider-v2",
       providerVersion: versionFromGitTag() + "-provider",
-      providerBranch: versionFromGitTag().split("-")[1],
+      providerBranch:
+        process.env.GIT_BRANCH ??
+        versionFromGitTag().split("-")[1].split("+")[1],
       consumerVersionSelectors: [{ mainBranch: true }],
       pactBrokerUrl: process.env.PACT_BROKER_BASE_URL,
       // pactUrls: [

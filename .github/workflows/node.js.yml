@@ -34,7 +34,7 @@ jobs:
       - run: npm run publish
         name: publish ${{ matrix.folder }}
         working-directory: ${{ matrix.folder }}
-      - run: npm run test:provider
+      - run: GIT_BRANCH=${GITHUB_REF#refs/heads/} npm run test:provider
         name: test:provider ${{ matrix.folder }}
         working-directory: ${{ matrix.folder }}
       - run: npm run can-i-deploy:provider
