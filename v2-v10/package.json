@@ -10,10 +10,10 @@
     "test:consumer": "mocha --exit --timeout 30000 consumer.pact.spec.js",
     "test:provider": "mocha --exit --timeout 30000 provider.pact.spec.js",
     "publish": "npx pact-broker publish ./pacts --consumer-app-version $(npx -y absolute-version)-consumer --auto-detect-version-properties",
-    "can-i-deploy:consumer": "npx pact-broker can-i-deploy --pacticipant katacoda-consumer-v2 --version $(npx -y absolute-version)-consumer --to-environment production",
-    "can-i-deploy:provider": "npx pact-broker can-i-deploy --pacticipant katacoda-provider-v2 --version $(npx -y absolute-version)-provider --to-environment production",
-    "record-deployment:consumer": "npx pact-broker record-deployment --pacticipant katacoda-consumer-v2 --version $(npx -y absolute-version)-consumer --environment production",
-    "record-deployment:provider": "npx pact-broker record-deployment --pacticipant katacoda-provider-v2 --version $(npx -y absolute-version)-provider --environment production"
+    "can-i-deploy:consumer": "npx pact-broker can-i-deploy --pacticipant katacoda-consumer-v2-10 --version $(npx -y absolute-version)-consumer --to-environment production",
+    "can-i-deploy:provider": "npx pact-broker can-i-deploy --pacticipant katacoda-provider-v2-10 --version $(npx -y absolute-version)-provider --to-environment production",
+    "record-deployment:consumer": "npx pact-broker record-deployment --pacticipant katacoda-consumer-v2-10 --version $(npx -y absolute-version)-consumer --environment production",
+    "record-deployment:provider": "npx pact-broker record-deployment --pacticipant katacoda-provider-v2-10 --version $(npx -y absolute-version)-provider --environment production"
   },
   "devDependencies": {
     "@pact-foundation/pact": "^10.1.2",
