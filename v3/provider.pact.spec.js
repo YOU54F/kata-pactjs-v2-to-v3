@@ -19,9 +19,9 @@ describe("Pact Verification", () => {
       consumerVersionSelectors: [{ mainBranch: true }],
       pactBrokerUrl: process.env.PACT_BROKER_BASE_URL,
       // pactUrls: [
-      //   `${process.env.PWD}/pacts/katacoda-consumer-katacoda-provider.json`,
+      //   `${process.env.PWD}/pacts/katacoda-consumer-v3-katacoda-provider-v3.json`,
       // ],
-      publishVerificationResult: true,
+      publishVerificationResult: false,
       enablePending: true,
     };
     // (3) Running the Provider verification task

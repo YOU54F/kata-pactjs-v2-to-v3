@@ -36,11 +36,18 @@ describe("Products API test", () => {
       .willRespondWith({
         status: 200,
         headers: {
-          "Content-Type": regex(
-            "^application/json",
-            "application/json; charset=utf-8"
-          ),
+          "Content-Type": "application/json",
         },
+        // This causes a failure at verification time
+        // Expected header 'Content-Type' to have value 'application/json; charset=utf-8' but was 'application/json; charset=utf-8'
+        // Pact verifier is able to match application/json; charset=utf-8 from provider
+        // against application/json in the content-type header in the pact file.
+        // headers: {
+        //   "Content-Type": regex(
+        //     "^application/json",
+        //     "application/json; charset=utf-8"
+        //   ),
+        // },
         body: like(expectedProduct),
       });
 
